@@ -1,0 +1,4 @@
+.light {
+  --color-foreground: hsl(0, 0%, 5%);
+  --color-background: hsl(0, 0%, 95%);
+}
