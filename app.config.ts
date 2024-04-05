@@ -6,6 +6,7 @@ const config: Partial<SolidStartInlineConfig> = {
     preset: "vercel",
     prerender: {
       crawlLinks: true,
+      ignore: ["/api/*"],
     },
   },
   vite: {

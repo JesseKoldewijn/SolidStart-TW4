@@ -21,10 +21,7 @@ const ThemeToggle = () => {
   ) => {
     setIsTransitioning(true);
     handleThemeChange(e, theme(), setTheme);
-
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 500);
+    setTimeout(() => setIsTransitioning(false), 500);
   };
 
   return (

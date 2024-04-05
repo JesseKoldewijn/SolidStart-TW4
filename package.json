@@ -10,12 +10,16 @@
   "dependencies": {
     "@solidjs/router": "^0.13.1",
     "@solidjs/start": "1.0.0-rc.0",
+    "@trpc/client": "11.0.0-rc.332",
+    "@trpc/server": "11.0.0-rc.332",
     "solid-js": "^1.8.16",
     "solid-zustand": "^1.8.0",
     "vinxi": "^0.3.11",
+    "zod": "^3.22.4",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@solidjs/meta": "^0.29.3",
     "@tailwindcss/vite": "4.0.0-alpha.13",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "clsx": "^2.1.0",
