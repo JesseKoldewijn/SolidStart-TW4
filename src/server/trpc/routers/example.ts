@@ -12,8 +12,10 @@ export const exampleRouter = router({
     .query(async (opts) => {
       const { name } = opts.input;
 
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
       return {
-        greeting: `Hello, ${name}!`,
+        greeting: `Hello, ${name}! 👋 (fetched at: ${new Date().toUTCString()})`,
       };
     }),
 });

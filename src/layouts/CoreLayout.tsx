@@ -11,7 +11,7 @@ const CoreLayout = ({ children }: CoreLayoutProps) => {
   return (
     <>
       <Navbar />
-      <div class="flex px-2">{children}</div>
+      <div class="flex overscroll-none px-2">{children}</div>
     </>
   );
 };
