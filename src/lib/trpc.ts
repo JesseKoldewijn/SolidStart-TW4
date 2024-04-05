@@ -3,10 +3,10 @@ import { createResource } from "solid-js";
 
 import type { AppRouter } from "~/server/trpc/root";
 
-const proto = process.env.VERCEL_ENV === "production" ? "https://" : "http://";
-const hostUrl = process.env.VERCEL_URL
-  ? `${proto}${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+const hostUrl =
+  process.env.NODE_ENV == "production"
+    ? "tw4-solid-start.vercel.app"
+    : "http://localhost:3000";
 
 // Pass AppRouter as generic here. 👇 This lets the `trpc` object know
 // what procedures are available on the server and their input/output types.
