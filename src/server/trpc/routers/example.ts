@@ -7,15 +7,16 @@ export const exampleRouter = router({
     .input(
       z.object({
         name: z.string(),
+        timeStamp: z.string(),
       }),
     )
     .query(async (opts) => {
-      const { name } = opts.input;
+      const { name, timeStamp } = opts.input;
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       return {
-        greeting: `Hello, ${name}! 👋 (fetched at: ${new Date().toUTCString()})`,
+        greeting: `Hello, ${name}! 👋 (fetched at: ${timeStamp})`,
       };
     }),
 });

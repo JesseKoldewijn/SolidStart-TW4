@@ -8,7 +8,10 @@ const HomePage = () => {
   const [data, { refetch }] = useTrpc({
     router: "example",
     procedure: "hello",
-    input: { name: "world" },
+    input: {
+      name: "world",
+      timeStamp: new Date().toUTCString(),
+    },
   });
 
   const [isRefetching, setIsRefetching] = createSignal(false);
