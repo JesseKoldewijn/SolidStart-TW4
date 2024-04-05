@@ -24,7 +24,7 @@ const Navbar = () => {
       : window.location.pathname;
     setPathName(pathName);
 
-    window.location.assign(e.currentTarget.href);
+    window.location.href = e.currentTarget.href;
   };
 
   return (
