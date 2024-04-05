@@ -2,9 +2,10 @@
   "name": "fly-solidstart",
   "type": "module",
   "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start",
+    "dev": "dotenv -- vinxi dev",
+    "build": "dotenv -- vinxi build",
+    "start": "dotenv -- vinxi start",
+    "preview:local": "LOCAL_PREVIEW=true dotenv -- vinxi build && LOCAL_PREVIEW=true dotenv -- vinxi start",
     "format": "prettier --write ."
   },
   "dependencies": {
@@ -12,6 +13,7 @@
     "@solidjs/start": "1.0.0-rc.0",
     "@trpc/client": "11.0.0-rc.332",
     "@trpc/server": "11.0.0-rc.332",
+    "dotenv-cli": "^7.4.1",
     "solid-js": "^1.8.16",
     "solid-zustand": "^1.8.0",
     "vinxi": "^0.3.11",
@@ -22,6 +24,7 @@
     "@solidjs/meta": "^0.29.3",
     "@tailwindcss/vite": "4.0.0-alpha.13",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^20.12.4",
     "clsx": "^2.1.0",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "0.5.13",

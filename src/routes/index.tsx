@@ -4,7 +4,7 @@ import { useTrpc } from "~/lib/trpc";
 import { PageTitle } from "~/server/meta/PageTitle.jsx";
 
 const HomePage = () => {
-  const [data, { refetch, mutate }] = useTrpc({
+  const [data] = useTrpc({
     router: "example",
     procedure: "hello",
     input: { name: "world" },

@@ -1,24 +1,11 @@
 // @refresh reload
 import { StartServer, createHandler } from "@solidjs/start/server";
-import { JSX } from "solid-js";
 
 import { cookieNames } from "./config/cookies.js";
 import { cn } from "./utils/cn.js";
 import { cookieMapper } from "./utils/cookies.js";
 
-interface ServerDocumentProps {
-  // collection of elements
-  assets: JSX.Element[];
-  children: JSX.Element;
-  scripts: JSX.Element[];
-}
-
-interface ServerProps extends ServerDocumentProps {
-  request: Request;
-  response: Response;
-}
-
-export default createHandler((props: ServerProps) => {
+export default createHandler((props) => {
   const { request } = props;
 
   const reqCookies = request.headers.get("cookie");
@@ -29,7 +16,7 @@ export default createHandler((props: ServerProps) => {
 
   return (
     <StartServer
-      document={({ assets, children, scripts }: ServerDocumentProps) => {
+      document={({ assets, children, scripts }) => {
         return (
           <html
             lang="en"

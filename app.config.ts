@@ -1,9 +1,11 @@
 import { SolidStartInlineConfig, defineConfig } from "@solidjs/start/config";
 import tailwindcss from "@tailwindcss/vite";
 
-const config: Partial<SolidStartInlineConfig> = {
+const isLocalPreview = process.env.LOCAL_PREVIEW === "true";
+
+const config: SolidStartInlineConfig = {
   server: {
-    preset: "vercel",
+    preset: !isLocalPreview ? "vercel" : undefined,
     prerender: {
       crawlLinks: true,
       ignore: ["/api/*"],

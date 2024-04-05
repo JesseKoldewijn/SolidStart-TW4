@@ -1,19 +1,15 @@
 import { createTRPCClient, httpBatchLink } from "@trpc/client";
 import { createResource } from "solid-js";
 
+import { hostname } from "~/config/http";
 import type { AppRouter } from "~/server/trpc/root";
-
-const hostUrl =
-  process.env.NODE_ENV == "production"
-    ? "https://tw4-solid-start.vercel.app"
-    : "http://localhost:3000";
 
 // Pass AppRouter as generic here. 👇 This lets the `trpc` object know
 // what procedures are available on the server and their input/output types.
 export const trpc = createTRPCClient<AppRouter>({
   links: [
     httpBatchLink({
-      url: `${hostUrl}/api/trpc`,
+      url: `${hostname}/api/trpc`,
     }),
   ],
 });
