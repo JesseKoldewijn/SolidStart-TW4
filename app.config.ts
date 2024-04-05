@@ -1,8 +1,9 @@
-import { defineConfig } from "@solidjs/start/config";
+import { SolidStartInlineConfig, defineConfig } from "@solidjs/start/config";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
+const config: Partial<SolidStartInlineConfig> = {
   server: {
+    preset: "vercel",
     prerender: {
       crawlLinks: true,
     },
@@ -17,4 +18,6 @@ export default defineConfig({
       },
     },
   },
-});
+};
+
+export default defineConfig(config);
