@@ -5,7 +5,7 @@ import type { AppRouter } from "~/server/trpc/root";
 
 const hostUrl =
   process.env.NODE_ENV == "production"
-    ? "tw4-solid-start.vercel.app"
+    ? "https://tw4-solid-start.vercel.app"
     : "http://localhost:3000";
 
 // Pass AppRouter as generic here. 👇 This lets the `trpc` object know
