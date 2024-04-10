@@ -34,6 +34,6 @@ export const useTrpc = ({
     });
   } catch (error) {
     console.error(error);
-    return createResource(() => undefined);
+    return createResource(async () => undefined);
   }
 };
