@@ -1,6 +1,6 @@
-import { Button } from "@kobalte/core";
 import { Show, createSignal } from "solid-js";
 
+import Button from "~/components/ui/Button";
 import { useTrpc } from "~/lib/trpc";
 import { PageTitle } from "~/server/meta/PageTitle.jsx";
 
@@ -38,13 +38,9 @@ const HomePage = () => {
             <div class="max-w-sm text-balance">{data()?.greeting}</div>
           </Show>
         </div>
-        <Button.Root
-          onClick={handleClick}
-          class="hover:bg-foreground hover:text-background cursor-pointer rounded-md border-2 py-1 px-2 hover:border-transparent"
-          disabled={isRefetching()}
-        >
+        <Button size="sm" onClick={handleClick} disabled={isRefetching()}>
           Refetch
-        </Button.Root>
+        </Button>
       </div>
     </>
   );

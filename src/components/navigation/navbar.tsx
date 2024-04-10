@@ -28,7 +28,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav class="fixed flex w-full items-center justify-between overscroll-none p-2">
+    <nav class="fixed flex w-full items-center justify-between overscroll-none p-4 pt-5">
       <div>
         <Link.Root class="underline-offset-2 hover:underline" href="/">
           <h1 class="text-2xl font-bold">SolidJS Starter</h1>

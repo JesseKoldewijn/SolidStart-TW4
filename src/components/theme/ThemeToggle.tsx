@@ -4,6 +4,7 @@ import { useThemeStore } from "~/stores/theme.js";
 import { Theme } from "~/types/themes.js";
 
 import { DarkModeIcon, LightModeIcon } from "../icons/Theme.jsx";
+import Button from "../ui/Button.jsx";
 
 const ThemeToggle = () => {
   const store = useThemeStore();
@@ -25,8 +26,8 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button
-      class="bg-foreground text-background border-foreground flex h-10 w-10 cursor-pointer items-center justify-center rounded-md border-2 p-1"
+    <Button
+      size="icon"
       onClick={handleTransitionStart}
       data-current={theme()}
       aria-label="Toggle light/dark theme"
@@ -37,7 +38,7 @@ const ThemeToggle = () => {
       disabled={isTransitioning()}
     >
       {theme() === "light" ? <DarkModeIcon /> : <LightModeIcon />}
-    </button>
+    </Button>
   );
 };
 
