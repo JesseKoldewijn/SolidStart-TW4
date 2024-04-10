@@ -1,5 +1,4 @@
-import { Button } from "@kobalte/core";
-
+import Button from "~/components/ui/Button";
 import { PageTitle } from "~/server/meta/PageTitle.jsx";
 
 const AboutPage = () => {
@@ -13,12 +12,12 @@ const AboutPage = () => {
         <div class="flex flex-col gap-2 text-balance">
           <h2>About</h2>
         </div>
-        <Button.Root
+        <Button
           onClick={handleClick}
           class="hover:bg-foreground hover:text-background cursor-pointer rounded-md border-2 py-1 px-2 hover:border-transparent"
         >
           Go back to home page
-        </Button.Root>
+        </Button>
       </div>
     </>
   );
